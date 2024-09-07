@@ -4,7 +4,7 @@
   "description": "some custom frontend template by fanchen",
   "main": "bin/cli.js",
   "bin": {
-    "fc_cli": "bin/cli.js"
+    "fanchen_cli": "bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
