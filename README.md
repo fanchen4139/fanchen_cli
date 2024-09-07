@@ -10,15 +10,15 @@ npx fanchen_cli init <project_name>
 
 ``第一步：选择框架``
 
-<img src="assets/choose_frame.png">
+<img src="./assets/choose_frame.png">
 
 ``第二步：选择模板``**[不同模板运行时所需的 node 版本可能存在差异]**
 
-<img src="assets/choose_tmpl.png">
+<img src="./assets/choose_tmpl.png">
 
 ``🚀🚀🚀恭喜创建成功``
 
-<img src="assets/succeed.png">
+<img src="./assets/succeed.png">
 
 ## Setup
 
