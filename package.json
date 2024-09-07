@@ -1,0 +1,22 @@
+{
+  "name": "fanchen_cli",
+  "version": "0.0.1",
+  "description": "some custom frontend template by fanchen",
+  "main": "bin/cli.js",
+  "bin": {
+    "fc_cli": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "@inquirer/prompts": "^5.5.0",
+    "chalk": "^4.1.0",
+    "commander": "^10.0.1",
+    "figlet": "^1.6.0",
+    "fs-extra": "^11.1.1"
+  }
+}
