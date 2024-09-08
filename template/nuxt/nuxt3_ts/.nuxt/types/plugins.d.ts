@@ -7,15 +7,15 @@ type IsAny<T> = 0 extends 1 & T ? true : false
 type InjectionType<A extends Plugin> = IsAny<A> extends true ? unknown : A extends Plugin<infer T> ? Decorate<T> : unknown
 
 type NuxtAppInjections = 
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/revive-payload.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/head/runtime/plugins/unhead.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/pages/runtime/plugins/router.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/payload.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/revive-payload.server.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1_@parcel+watcher@2.4.1_@types+node@22.5.4_ioredis@5.4.1_magicast@0.3.5_rollup@4.21_gyumx2uughrkxfi3zhio7jcoaq/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js").default>
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/revive-payload.client.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/head/runtime/plugins/unhead.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/pages/runtime/plugins/router.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/payload.client.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/revive-payload.server.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.1/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
