@@ -1,5 +1,9 @@
 # FanChen_CLI
 Vue、Nuxt 自定义脚手架模板
+* Vue
+    * `Based-Element_Vue2` **基于 Element-UI 二次开发的组件库**
+* Nuxt
+    * `Nuxt3_TS` **Nuxt3 with TypeScript**
 
 ### **注：使用该脚手架命令时，请保证 node 版本 >= 18**
 
