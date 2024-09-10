@@ -1,0 +1,14 @@
+{
+  "name": "@element-fc_v2/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "pnpm run cleanEs && pnpm run cleanLib && gulp",
+    "cleanEs": "rimraf ./es",
+    "cleanLib": "rimraf ./lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,341 @@
+@use "./mixins/mixins.scss" as *;
+
+@font-face {
+  font-family: "z-ui-icons"; /* Project id 2861785 */
+  src: url('./fonts/iconfont.woff2?t=1671515504532') format('woff2'),
+  url('./fonts/iconfont.woff?t=1671515504532') format('woff'),
+  url('./fonts/iconfont.ttf?t=1671515504532') format('truetype');
+}
+/* $namespace: z
+ 以$namespace-icon开头或者空格分隔符后边是$namespace-icon都使用以下样式
+ class="z-icon-name"
+ class="z-cell z-icon-name"
+ */
+[class^='#{$namespace}-icon'],[class*='#{$namespace}-icon'] {
+  font-family: "z-ui-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$namespace}-icon-bianji_editor:before {
+  content: "\e617";
+}
+
+.#{$namespace}-icon-pptwenjian_file-ppt:before {
+  content: "\e618";
+}
+
+.#{$namespace}-icon-bofang_play:before {
+  content: "\e619";
+}
+
+.#{$namespace}-icon-bofang_play-one:before {
+  content: "\e61a";
+}
+
+.#{$namespace}-icon-buxihuan_dislike:before {
+  content: "\e61b";
+}
+
+.#{$namespace}-icon-daima_code:before {
+  content: "\e61c";
+}
+
+.#{$namespace}-icon-daimawenjianjia_folder-code:before {
+  content: "\e61d";
+}
+
+.#{$namespace}-icon-dayinji_printer:before {
+  content: "\e61e";
+}
+
+.#{$namespace}-icon-erweima_two-dimensional-code-two:before {
+  content: "\e61f";
+}
+
+.#{$namespace}-icon-guanbi_close:before {
+  content: "\e620";
+}
+
+.#{$namespace}-icon-gengduo1_more-one:before {
+  content: "\e621";
+}
+
+.#{$namespace}-icon-daimawenjian_file-code:before {
+  content: "\e622";
+}
+
+.#{$namespace}-icon-gongzuotai_workbench:before {
+  content: "\e623";
+}
+
+.#{$namespace}-icon-gengduo_more:before {
+  content: "\e624";
+}
+
+.#{$namespace}-icon-fenxiang_share:before {
+  content: "\e625";
+}
+
+.#{$namespace}-icon-jia_plus:before {
+  content: "\e626";
+}
+
+.#{$namespace}-icon-guzhangtu_damage-map:before {
+  content: "\e627";
+}
+
+.#{$namespace}-icon-gengduo2_more-two:before {
+  content: "\e628";
+}
+
+.#{$namespace}-icon-jiantouxia_arrow-down:before {
+  content: "\e629";
+}
+
+.#{$namespace}-icon-gouwuche_shopping:before {
+  content: "\e62a";
+}
+
+.#{$namespace}-icon-jihua_plan:before {
+  content: "\e62b";
+}
+
+.#{$namespace}-icon-huatitaolun_topic-discussion:before {
+  content: "\e62c";
+}
+
+.#{$namespace}-icon-guanbitixing_close-remind:before {
+  content: "\e62d";
+}
+
+.#{$namespace}-icon-lianjieduankai_unlink:before {
+  content: "\e62e";
+}
+
+.#{$namespace}-icon-huati_topic:before {
+  content: "\e62f";
+}
+
+.#{$namespace}-icon-lianjie_link:before {
+  content: "\e630";
+}
+
+.#{$namespace}-icon-qudibu_to-bottom:before {
+  content: "\e631";
+}
+
+.#{$namespace}-icon-biaoqian_tag-one:before {
+  content: "\e632";
+}
+
+.#{$namespace}-icon-qudingbu_to-top:before {
+  content: "\e633";
+}
+
+.#{$namespace}-icon-qiehuan_switch:before {
+  content: "\e634";
+}
+
+.#{$namespace}-icon-jiazai_loading-one:before {
+  content: "\e635";
+}
+
+.#{$namespace}-icon-qianbao_wallet:before {
+  content: "\e636";
+}
+
+.#{$namespace}-icon-jingbao_alarm:before {
+  content: "\e637";
+}
+
+.#{$namespace}-icon-saoma_scan-code:before {
+  content: "\e638";
+}
+
+.#{$namespace}-icon-quanxian_permissions:before {
+  content: "\e639";
+}
+
+.#{$namespace}-icon-quanpingbofang_full-screen-play:before {
+  content: "\e63a";
+}
+
+.#{$namespace}-icon-quanjufangda1_full-screen-one:before {
+  content: "\e63b";
+}
+
+.#{$namespace}-icon-rili_calendar:before {
+  content: "\e63c";
+}
+
+.#{$namespace}-icon-quanbu_all-application:before {
+  content: "\e63d";
+}
+
+.#{$namespace}-icon-shouqicaidan_menu-fold:before {
+  content: "\e63e";
+}
+
+.#{$namespace}-icon-shangchuan1_upload-one:before {
+  content: "\e63f";
+}
+
+.#{$namespace}-icon-shanchu_delete-two:before {
+  content: "\e640";
+}
+
+.#{$namespace}-icon-shuangxiangshujuhuchuan_transfer-data:before {
+  content: "\e641";
+}
+
+.#{$namespace}-icon-shuqian_bookmark:before {
+  content: "\e642";
+}
+
+.#{$namespace}-icon-kaiguan_power:before {
+  content: "\e643";
+}
+
+.#{$namespace}-icon-shijian_time:before {
+  content: "\e644";
+}
+
+.#{$namespace}-icon-shangchuan_upload:before {
+  content: "\e645";
+}
+
+.#{$namespace}-icon-shouye_home:before {
+  content: "\e646";
+}
+
+.#{$namespace}-icon-shuaxin_refresh:before {
+  content: "\e647";
+}
+
+.#{$namespace}-icon-sousuo_search:before {
+  content: "\e648";
+}
+
+.#{$namespace}-icon-tixing_remind:before {
+  content: "\e649";
+}
+
+.#{$namespace}-icon-shuangzuo_double-left:before {
+  content: "\e64a";
+}
+
+.#{$namespace}-icon-tishi_tips:before {
+  content: "\e64b";
+}
+
+.#{$namespace}-icon-wendangjiazi_document-folder:before {
+  content: "\e64c";
+}
+
+.#{$namespace}-icon-shuangyou_double-right:before {
+  content: "\e64d";
+}
+
+.#{$namespace}-icon-wendang_word:before {
+  content: "\e64e";
+}
+
+.#{$namespace}-icon-xihuan_like:before {
+  content: "\e64f";
+}
+
+.#{$namespace}-icon-wenjianjia-kai_folder-open:before {
+  content: "\e650";
+}
+
+.#{$namespace}-icon-xia-jiantou_arrow-circle-down:before {
+  content: "\e651";
+}
+
+.#{$namespace}-icon-shezhi_setting-two:before {
+  content: "\e652";
+}
+
+.#{$namespace}-icon-wenjiangui_file-cabinet:before {
+  content: "\e653";
+}
+
+.#{$namespace}-icon-wode_me:before {
+  content: "\e654";
+}
+
+.#{$namespace}-icon-touxiang_avatar:before {
+  content: "\e655";
+}
+
+.#{$namespace}-icon-wenjianjia-guan_folder-close:before {
+  content: "\e656";
+}
+
+.#{$namespace}-icon-xunhuanbofang_play-cycle:before {
+  content: "\e657";
+}
+
+.#{$namespace}-icon-xiazai2_download-two:before {
+  content: "\e658";
+}
+
+.#{$namespace}-icon-xingxing_star:before {
+  content: "\e659";
+}
+
+.#{$namespace}-icon-yulan-guanbi_preview-close-one:before {
+  content: "\e65a";
+}
+
+.#{$namespace}-icon-zanting_pause-one:before {
+  content: "\e65b";
+}
+
+.#{$namespace}-icon-yulan-guanbi_preview-close:before {
+  content: "\e65c";
+}
+
+.#{$namespace}-icon-xiangji_camera:before {
+  content: "\e65d";
+}
+
+.#{$namespace}-icon-yasuowenjian_file-zip:before {
+  content: "\e65e";
+}
+
+.#{$namespace}-icon-zhankaicaidan_menu-unfold:before {
+  content: "\e65f";
+}
+
+.#{$namespace}-icon-yulan-dakai_preview-open:before {
+  content: "\e660";
+}
+
+.#{$namespace}-icon-zhuyi_attention:before {
+  content: "\e661";
+}
+
+.#{$namespace}-icon-zhaopian_pic:before {
+  content: "\e662";
+}
+
+.#{$namespace}-icon-zanting_pause:before {
+  content: "\e663";
+}
+
+.#{$namespace}-icon-xinxi_info:before {
+  content: "\e664";
+}
+
+.#{$namespace}-icon-tianjia_add-one:before {
+  content: "\e665";
+}
+
+.#{$namespace}-icon-xia_down:before {
+  content: "\e666";
+}
+

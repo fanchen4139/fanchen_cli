@@ -1,0 +1,13 @@
+{
+  "name": "@element-fc_v2/theme-chalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "pnpm run clean && gulp",
+    "clean": "rimraf ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

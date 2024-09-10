@@ -1,0 +1,42 @@
+html {
+  height: -webkit-fill-available;
+}
+body, #app, .page {
+  height 100%
+}
+.theme-container {
+  width 100vw
+  height 100%
+  display grid
+  grid-template-columns: auto 1fr;
+  grid-template-rows auto 1fr
+  grid-template-areas "header header""sidebar main"
+  .navbar {
+    position sticky
+    display flex
+    justify-content flex-end
+    padding-right 10%
+    grid-area header
+    .links {
+      position unset
+    }
+  }
+  .sidebar {
+    box-sizing border-box
+    position relative
+    top unset
+    grid-area sidebar
+    height 100%
+    overflow-y auto
+  }
+  .page {
+    box-sizing border-box
+    padding-left unset
+    overflow-y auto
+    height 100%
+    grid-area main
+    .a.header-anchor {
+      display none
+    }
+  }
+}
