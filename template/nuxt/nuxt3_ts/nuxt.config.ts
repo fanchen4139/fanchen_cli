@@ -12,5 +12,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: {
     "@": resolve(__dirname, '.')
+  },
+  app: {
+    baseURL: '/nuxt-app/'
+  },
+  vite: {
+    // base: './'
   }
 })
