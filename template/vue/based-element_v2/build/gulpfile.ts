@@ -19,7 +19,7 @@ export default series(
   withTaskName('clean', () => run('rimraf ./dist')),
   parallel(
     // 选择packages文件夹，并行执行所有build脚本
-    withTaskName('buildPackages', () => run('pnpm run --filter "./packages/*" --parallel build')),
+    withTaskName('buildPackages', () => run('pnpm run --filter "./packages/*" --parallel build')), //--parallel
     withTaskName("buildThemeChalk", () => run("pnpm run -C packages/theme-chalk build")),
     withTaskName("buildFullComponent", () => run("pnpm run build buildFullComponent")),
     withTaskName("buildComponent", () => run("pnpm run build buildComponent")),

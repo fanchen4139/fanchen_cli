@@ -2,7 +2,7 @@
 import {nodeResolve} from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import vue from "rollup-plugin-vue";
-import babel from "rollup-plugin-babel";
+import babel from "@rollup/plugin-babel";
 import typescript from "rollup-plugin-typescript2";
 import RollupPluginPostcss from 'rollup-plugin-postcss';
 // 解决组件内部如果有css 打包会报错的css插件
@@ -17,7 +17,7 @@ import {rollup, OutputOptions} from "rollup";
 import {buildConfig} from "./utils/config";
 import {pathRewriter, run} from "./utils";
 import {Project, SourceFile} from "ts-morph";
-import {terser} from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 // 压缩js代码
 import cleanup from 'rollup-plugin-cleanup';
 // 去除无效代码
@@ -53,14 +53,14 @@ const buildEachComponent = async () => {  // 打包每个组件
           setupComponent: false,
           setupSFC: false,
           plugins: {
-            vue: vue({
-              // isProduction: false,
-            }),
+            // vue: vue({
+            //   // isProduction: false,
+            // }),
             // vueJsx: vueJsx(),
           },
         }),
         nodeResolve(),
-        // vue(),
+        vue(),
         typescript({
           tsconfigOverride: overrides,
           check: false
@@ -85,7 +85,9 @@ const buildEachComponent = async () => {  // 打包每个组件
           legalComments: 'eof',
         }),
 //  cleanup(),
-        terser({compress: {drop_console: true}}) // 压缩js代码 及删除console
+        terser({
+          // compress: {drop_console: true}
+        }) // 压缩js代码 及删除console
       ],
       external: (id) => /^vue/.test(id) || /^@element-fc_v2/.test(id),
 // 排除掉vue和@element-fc_v2的依赖
@@ -207,7 +209,7 @@ async function buildComponentEntry() {
       }),
       cleanup(),
       terser({
-        compress: {drop_console: true}
+        // compress: {drop_console: true}
       })
 // 压缩js代码 及删除console
     ],

@@ -6,14 +6,14 @@ import vue from "rollup-plugin-vue";
 import RollupPluginPostcss from 'rollup-plugin-postcss';
 // 解决组件内部如果有css 打包会报错的css插件
 import typescript from "rollup-plugin-typescript2";
-import {parallel} from "gulp";
+import {parallel, series} from "gulp";
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import path from "path";
 import {buildOutput, getInputPath, rtzhRoot} from "./utils/paths";
 import {rollup, OutputOptions} from "rollup";
 import fs from "fs/promises";
-import {terser} from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 // 压缩js代码
 import cleanup from 'rollup-plugin-cleanup';
 // 去除无效代码
@@ -44,14 +44,14 @@ const buildFull = async () => {
           setupComponent: false,
           setupSFC: false,
           plugins: {
-            vue: vue({
-              // isProduction: false,
-            }),
+            // vue: vue({
+            //   // isProduction: false,
+            // }),
             // vueJsx: vueJsx(),
           },
         }),
         nodeResolve(),
-        // vue(),
+        vue(),
         // DefineOptions(),
         typescript({
           tsconfigOverride: overrides,
@@ -64,9 +64,9 @@ const buildFull = async () => {
         commonjs(),
         cleanup(),
         terser({
-          compress: {
-            drop_console: true
-          }
+          // compress: {
+          //   drop_console: true
+          // }
         }),
         esbuild({
           exclude: [],
@@ -137,9 +137,9 @@ async function buildEntry() {
       }),
       cleanup(),
       terser({
-        compress: {
-          drop_console: true
-        }
+        // compress: {
+        //   drop_console: true
+        // }
       })
       // 压缩js代码 及删除console
     ],

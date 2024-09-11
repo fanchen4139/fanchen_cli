@@ -7,7 +7,7 @@ export const buildOutput = resolve(projectRoot, 'dist')
 // __dirname: 执行函数所在的路径
 export const outDir = resolve(__dirname, "../../dist")
 // element-fc_v2 入口 index.js
-export const rtzhRoot = resolve(projectRoot,'packages/element-fc_v2')
+export const rtzhRoot = resolve(projectRoot,'packages/element-fc')
 // 组件目录
 export const compRoot = resolve(projectRoot,'packages/components')
 
