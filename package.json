@@ -2,6 +2,11 @@
   "name": "fanchen_cli",
   "version": "0.0.6",
   "description": "some custom frontend template by fanchen",
+  "homepage": "https://github.com/fanchen4139/fanchen_cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanchen4139/fanchen_cli.git"
+  },
   "main": "bin/cli.js",
   "bin": {
     "fanchen_cli": "bin/cli.js"
@@ -12,7 +17,12 @@
   "private": false,
   "author": "",
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "vue",
+    "nuxt",
+    "template"
+  ],
   "dependencies": {
     "@inquirer/prompts": "^5.5.0",
     "chalk": "^4.1.0",
@@ -20,5 +30,8 @@
     "figlet": "^1.6.0",
     "fs-extra": "^11.1.1",
     "nypm": "^0.3.11"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
