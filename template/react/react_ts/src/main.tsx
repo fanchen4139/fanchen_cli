@@ -4,7 +4,7 @@ import './index.css'
 import "normalize.css"
 import {Provider} from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react';
-import {store, persistor} from "./store";
+import {store, persistor} from "./stores";
 createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <PersistGate loading={<h1>Loading...</h1>} persistor={persistor}>

@@ -3,22 +3,31 @@ import React, {useEffect} from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input, Flex } from 'antd';
 import {useNavigate} from "react-router-dom";
-import {clearAuth, setAuth} from "@/store/modules/authStore.ts";
+import {setToken, clear} from "@/stores/modules/user.ts";
 import {useDispatch} from "react-redux";
 import require from "../utils/require.ts";
+import {loginApi} from "../../api/modules/system/login.ts";
+import {ILogin} from "../../api/interface/system/login.ts";
+import {setUserInfo} from "../../stores/modules/user.ts";
 
 const Index: React.FC = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const onFinish = (values: unknown) => {
+  const onFinish = async(values: ILogin.LoginParams) => {
     console.log('Received values of form: ', values)
-    dispatch(setAuth('123'))
+    // 1、执行登录接口
+    const {data} = await loginApi({...values})
+    dispatch(setToken(data.accessToken))
+    dispatch(setUserInfo(data.userInfo))
+
+    // 2、添加动态路由
+    await initDy
     navigate('/', {replace: true})
     // navigate('/', )
   }
   useEffect(() => {
-    dispatch(clearAuth())
-  }, [])
+    dispatch(clear())
+  }, [dispatch])
 
   return (
     <div className={'login-container flx-center'}>

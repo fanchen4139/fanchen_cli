@@ -1,14 +1,14 @@
-import {createBrowserRouter} from "react-router-dom";
-import {lazy} from "react";
-import About from "../views/about";
-import StateParams from "../views/navigateDemo/stateParams";
-import BasicLayout from "../views/baiscLayout";
-import Login from "@/views/login";
+import {lazy} from "react"
+import About from "@/views/about"
+import Login from "@/views/login"
+import BasicLayout from "@/views/baiscLayout"
+import {createBrowserRouter} from "react-router-dom"
+import StateParams from "@/views/navigateDemo/stateParams"
 
-const Home = lazy(() => import("../views/home"))
-const Params = lazy(() => import("../views/navigateDemo/params"))
-const SearchParams = lazy(() => import("../views/navigateDemo/searchParams"))
-const NavigateDemo = lazy(() => import("../views/navigateDemo"))
+const Home = lazy(() => import("@/views/home"))
+const Params = lazy(() => import("@/views/navigateDemo/params"))
+const SearchParams = lazy(() => import("@/views/navigateDemo/searchParams"))
+const NavigateDemo = lazy(() => import("@/views/navigateDemo"))
 const routes = createBrowserRouter([
   {
     path: '/',
@@ -17,11 +17,11 @@ const routes = createBrowserRouter([
       {
         index: true,
         path: 'navigate',
-        element: <NavigateDemo></NavigateDemo>
+        element: <NavigateDemo />
       },
       {
         path: 'home',
-        element: <Home></Home>
+        element: <Home />
       },
     ]
   },

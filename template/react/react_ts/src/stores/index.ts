@@ -1,12 +1,14 @@
-import counterReducer from "./modules/counterStore.ts";
-import authReducer from "./modules/authStore.ts";
+import counterReducer from "./modules/counter.ts";
+import authReducer from "./modules/auth.ts";
+import userReducer from "./modules/user.ts"; // 使用 localStorage
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // 使用 localStorage
+import storage from 'redux-persist/lib/storage';
 // 定义 RootState 类型
 export type RootState = {
   counter: ReturnType<typeof counterReducer>;
   auth: ReturnType<typeof authReducer>;
+  user: ReturnType<typeof userReducer>;
 };
 
 // Redux Persist 配置
@@ -18,6 +20,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   counter: counterReducer,
   auth: authReducer,
+  user: userReducer,
   // 其他 reducer 可以在这里添加
 });
 
@@ -43,3 +46,7 @@ export default {
   store,
   persistor,
 }
+
+export const selectUserStore = (state: RootState) => state.user
+export const selectAuthStore = (state: RootState) => state.auth
+export const selectCounterStore = (state: RootState) => state.counter

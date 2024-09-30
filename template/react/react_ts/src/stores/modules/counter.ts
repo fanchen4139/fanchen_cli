@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-const counterStore = createSlice({
+const counter = createSlice({
   name: 'counter',
   // 初始化状态数据
   initialState: {
@@ -17,9 +17,9 @@ const counterStore = createSlice({
   }
 })
 // 解构出创建action对象的函数
-const { increment, decrement } = counterStore.actions
+const { increment, decrement } = counter.actions
 // 获取reducer函数
-const counterReducer = counterStore.reducer
+const counterReducer = counter.reducer
 
 export { increment, decrement }
 

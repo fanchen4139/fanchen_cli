@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import { RootState } from "../../store"
+import { RootState } from "../../stores"
 
 const Auth: React.FC<React.PropsWithChildren> = React.memo(({ children }) => {
   const navigate = useNavigate()

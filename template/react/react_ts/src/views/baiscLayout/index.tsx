@@ -10,7 +10,7 @@ import type {MenuProps} from 'antd';
 import {Breadcrumb, Layout, Menu, theme} from 'antd';
 import {Outlet, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {RootState} from "../../store";
+import {RootState} from "../../stores";
 
 const {Header, Content, Footer, Sider} = Layout;
 
