@@ -4,13 +4,18 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input, Flex } from 'antd';
 import {useNavigate} from "react-router-dom";
 import {setToken, clear} from "@/stores/modules/user.ts";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import require from "../utils/require.ts";
 import {loginApi} from "../../api/modules/system/login.ts";
 import {ILogin} from "../../api/interface/system/login.ts";
 import {setUserInfo} from "../../stores/modules/user.ts";
+import {initDynamicRouter} from "../../routes/modules/dynamicRouter.ts";
+import {selectAuthStore, selectUserStore} from "../../stores";
 
 const Index: React.FC = () => {
+  const userStore = useSelector(selectUserStore)
+  const authStore = useSelector(selectAuthStore)
+  // const optionsStore = useSelector(selectUserStore)
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const onFinish = async(values: ILogin.LoginParams) => {
@@ -21,7 +26,7 @@ const Index: React.FC = () => {
     dispatch(setUserInfo(data.userInfo))
 
     // 2、添加动态路由
-    await initDy
+    await initDynamicRouter(userStore, authStore)
     navigate('/', {replace: true})
     // navigate('/', )
   }
